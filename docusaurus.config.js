@@ -48,7 +48,7 @@ const config = {
         },
         blog: false, // Disable blog for now
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: './src/css/tailwind.css',
         },
       }),
     ],

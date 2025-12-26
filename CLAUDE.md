@@ -208,3 +208,10 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 
 ## Code Standards
 See `.specify/memory/constitution.md` for code quality, testing, performance, security, and architecture principles.
+
+## Active Technologies
+- JavaScript/React with Node.js LTS (20.x or higher) + Docusaurus (v3+), Tailwind CSS (v3+), React (18+), Node.js package ecosystem (001-book-ui-system)
+- Static file generation (Docusaurus), no database needed for documentation site (001-book-ui-system)
+
+## Recent Changes
+- 001-book-ui-system: Added JavaScript/React with Node.js LTS (20.x or higher) + Docusaurus (v3+), Tailwind CSS (v3+), React (18+), Node.js package ecosystem
