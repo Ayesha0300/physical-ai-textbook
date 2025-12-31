@@ -58,6 +58,17 @@ const sidebars = {
       ],
       collapsed: false,
     },
+    {
+      type: 'category',
+      label: 'Learning Modules',
+      items: [
+        'modules/README',
+        'modules/module-1',
+        'modules/module-2',
+        'modules/module-3',
+      ],
+      collapsed: false,
+    },
     'glossary',
   ],
 };

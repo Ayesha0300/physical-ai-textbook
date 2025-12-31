@@ -45,7 +45,6 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          routeBasePath: '/', // Serve docs at the root
         },
         blog: false, // Disable blog for now
         theme: {
@@ -74,26 +73,6 @@ const config = {
             label: 'Book',
           },
           {
-            to: '/modules',
-            label: 'Modules',
-            position: 'left',
-          },
-          {
-            to: '/capstone',
-            label: 'Capstone',
-            position: 'left',
-          },
-          {
-            to: '/hardware',
-            label: 'Hardware',
-            position: 'left',
-          },
-          {
-            to: '/chatbot',
-            label: 'Chatbot',
-            position: 'left',
-          },
-          {
             href: 'https://github.com/your-username/physical-ai-book',
             label: 'GitHub',
             position: 'right',
@@ -104,61 +83,37 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Modules',
+            title: 'Docs',
             items: [
               {
-                label: 'Learning Modules',
-                to: '/modules',
-              },
-              {
-                label: 'Module 1: ROS 2',
-                to: '/modules/module-1',
-              },
-              {
-                label: 'Module 2: Gazebo',
-                to: '/modules/module-2',
-              },
-              {
-                label: 'Module 3: Isaac Sim',
-                to: '/modules/module-3',
-              },
-              {
-                label: 'Module 4: VLA',
-                to: '/modules/module-4',
-              },
-              {
-                label: 'Capstone Project',
-                to: '/capstone',
-              },
-            ],
-          },
-          {
-            title: 'Resources',
-            items: [
-              {
-                label: 'Docs',
+                label: 'Introduction',
                 to: '/docs/intro',
               },
+            ],
+          },
+          {
+            title: 'Community',
+            items: [
               {
-                label: 'Hardware Setup',
-                to: '/hardware',
+                label: 'Stack Overflow',
+                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/your-username/physical-ai-book',
+                label: 'Discord',
+                href: 'https://discordapp.com/invite/docusaurus',
+              },
+              {
+                label: 'Twitter',
+                href: 'https://twitter.com/docusaurus',
               },
             ],
           },
           {
-            title: 'Legal',
+            title: 'More',
             items: [
               {
-                label: 'License',
-                href: 'https://creativecommons.org/licenses/by/4.0/',
-              },
-              {
-                label: 'Credits',
-                to: '/docs/credits',
+                label: 'GitHub',
+                href: 'https://github.com/facebook/docusaurus',
               },
             ],
           },
@@ -169,28 +124,7 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
-      colorMode: {
-        defaultMode: 'dark',
-        disableSwitch: false,
-        respectPrefersColorScheme: false,
-      },
     }),
-
-  // Add custom head tags for typography fonts
-  stylesheets: [
-    // Add Inter font from Google Fonts for headings and body text
-    {
-      href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap',
-      type: 'text/css',
-      rel: 'stylesheet',
-    },
-    // Alternative: Geist or Space Grotesk fonts
-    // {
-    //   href: 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap',
-    //   type: 'text/css',
-    //   rel: 'stylesheet',
-    // },
-  ],
 };
 
 export default config;

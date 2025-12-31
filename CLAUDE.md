@@ -208,3 +208,7 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 
 ## Code Standards
 See `.specify/memory/constitution.md` for code quality, testing, performance, security, and architecture principles.
+
+## Recent Changes
+- 005-ui-ux-design: Added [if applicable, e.g., PostgreSQL, CoreData, files or N/A]
+- 005-ui-ux-design: Added [if applicable, e.g., PostgreSQL, CoreData, files or N/A]

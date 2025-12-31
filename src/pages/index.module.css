@@ -1,0 +1,658 @@
+/**
+ * Homepage Styles - CSS Module
+ * Modern, accessible design for Physical AI educational platform
+ */
+
+/* ============================================================================
+   HERO SECTION
+   ========================================================================== */
+
+.heroBanner {
+  background: linear-gradient(135deg,
+    var(--doc-bg-dark, #0f172a) 0%,
+    var(--doc-bg-secondary-dark, #1e293b) 50%,
+    var(--doc-bg-dark, #0f172a) 100%
+  );
+  padding: 6rem 0 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme='light'] .heroBanner {
+  background: linear-gradient(135deg,
+    #0f4c75 0%,
+    #1a5490 50%,
+    #0f4c75 100%
+  );
+}
+
+.heroBanner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: var(--doc-text-primary-dark, #f8fafc);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  color: var(--doc-text-secondary-dark, #e2e8f0);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+/* Hero Card */
+.heroCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='light'] .heroCard {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.heroCardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.heroCardText {
+  text-align: left;
+}
+
+.heroCardTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--doc-text-primary-dark, #f8fafc);
+}
+
+[data-theme='light'] .heroCardTitle {
+  color: var(--doc-text-primary-light, #0f172a);
+}
+
+.heroCardDescription {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--doc-text-secondary-dark, #e2e8f0);
+  margin: 0;
+}
+
+[data-theme='light'] .heroCardDescription {
+  color: var(--doc-text-secondary-light, #334155);
+}
+
+/* Diagram */
+.heroCardDiagram {
+  display: flex;
+  justify-content: center;
+}
+
+.diagramContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+}
+
+[data-theme='light'] .diagramContainer {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.diagramItem {
+  text-align: center;
+}
+
+.diagramIcon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.diagramIcon:hover {
+  transform: scale(1.1);
+}
+
+.diagramIconAI {
+  background: rgba(6, 182, 212, 0.2);
+}
+
+.diagramIconPerception {
+  background: rgba(139, 92, 246, 0.2);
+}
+
+.diagramIconPlanning {
+  background: rgba(16, 185, 129, 0.2);
+}
+
+.diagramIconAction {
+  background: rgba(245, 158, 11, 0.2);
+}
+
+.diagramLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--doc-text-secondary-dark, #e2e8f0);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+[data-theme='light'] .diagramLabel {
+  color: var(--doc-text-secondary-light, #334155);
+}
+
+.diagramArrow {
+  font-size: 2rem;
+  color: var(--doc-text-muted-dark, #cbd5e1);
+  font-weight: 300;
+}
+
+[data-theme='light'] .diagramArrow {
+  color: var(--doc-text-muted-light, #64748b);
+}
+
+/* Responsive Hero */
+@media (max-width: 996px) {
+  .heroTitle {
+    font-size: 2.75rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.25rem;
+  }
+
+  .heroCardContent {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroBanner {
+    padding: 4rem 0 3rem;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.125rem;
+  }
+
+  .heroCard {
+    padding: 1.5rem;
+  }
+
+  .heroCardTitle {
+    font-size: 1.375rem;
+  }
+
+  .heroCardDescription {
+    font-size: 1rem;
+  }
+
+  .diagramContainer {
+    padding: 1rem;
+  }
+
+  .diagramIcon {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+  }
+
+  .diagramArrow {
+    font-size: 1.5rem;
+  }
+}
+
+/* ============================================================================
+   SECTION COMMONS
+   ========================================================================== */
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-content);
+}
+
+.sectionDescription {
+  font-size: 1.25rem;
+  color: var(--ifm-color-content-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ============================================================================
+   CURRICULUM SECTION
+   ========================================================================== */
+
+.curriculumSection {
+  padding: 5rem 0;
+  background-color: var(--ifm-background-surface-color);
+}
+
+[data-theme='light'] .curriculumSection {
+  background-color: var(--doc-bg-secondary-light, #f8fafc);
+}
+
+.curriculumGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.curriculumCard {
+  background-color: var(--doc-bg-light, #ffffff);
+  border: 1px solid var(--doc-border-light, #e2e8f0);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .curriculumCard {
+  background-color: var(--doc-bg-secondary-dark, #1e293b);
+  border-color: var(--doc-border-dark, #334155);
+}
+
+.curriculumCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+[data-theme='dark'] .curriculumCard:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.cardIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.cardTitle {
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--ifm-color-content);
+}
+
+.cardDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ifm-color-content-secondary);
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.cardFooter {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+/* ============================================================================
+   LEARNING PATH SECTION
+   ========================================================================== */
+
+.learningPathSection {
+  padding: 5rem 0;
+}
+
+.learningPathGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.learningStepCard {
+  position: relative;
+  padding: 2rem;
+  background-color: var(--ifm-background-surface-color);
+  border: 2px solid var(--ifm-color-emphasis-200);
+  border-radius: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+[data-theme='dark'] .learningStepCard {
+  background-color: var(--doc-bg-secondary-dark, #1e293b);
+  border-color: var(--doc-border-dark, #334155);
+}
+
+.learningStepCard:hover {
+  border-color: var(--ifm-color-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme='dark'] .learningStepCard:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.stepNumber {
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--ifm-color-primary), var(--ifm-color-primary-dark));
+  color: white;
+  font-weight: 700;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.stepIcon {
+  font-size: 3.5rem;
+  margin: 1rem 0;
+  display: block;
+}
+
+.stepTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-content);
+}
+
+.stepSubtitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ifm-color-primary);
+  margin-bottom: 1rem;
+}
+
+.stepDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ifm-color-content-secondary);
+  margin: 0;
+}
+
+/* ============================================================================
+   FEATURES SECTION
+   ========================================================================== */
+
+.featuresSection {
+  padding: 5rem 0;
+  background-color: var(--ifm-background-surface-color);
+}
+
+[data-theme='light'] .featuresSection {
+  background-color: var(--doc-bg-secondary-light, #f8fafc);
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featureCard {
+  text-align: center;
+  padding: 2rem;
+}
+
+.featureIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.featureTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--ifm-color-content);
+}
+
+.featureDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ifm-color-content-secondary);
+  margin: 0;
+}
+
+/* ============================================================================
+   CTA SECTION
+   ========================================================================== */
+
+.ctaSection {
+  padding: 5rem 0;
+  background: linear-gradient(135deg,
+    var(--ifm-color-primary-dark) 0%,
+    var(--ifm-color-primary) 50%,
+    var(--ifm-color-primary-dark) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.ctaContent {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.ctaDescription {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.6;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaButtons .button--primary {
+  background-color: white;
+  color: var(--ifm-color-primary);
+  border-color: white;
+}
+
+.ctaButtons .button--primary:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--ifm-color-primary-dark);
+  transform: translateY(-2px);
+}
+
+.ctaButtons .button--secondary {
+  background-color: transparent;
+  border-color: white;
+  color: white;
+}
+
+.ctaButtons .button--secondary:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: white;
+  color: white;
+}
+
+/* ============================================================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================================================== */
+
+@media (max-width: 996px) {
+  .curriculumGrid,
+  .learningPathGrid,
+  .featuresGrid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .sectionDescription {
+    font-size: 1.125rem;
+  }
+
+  .ctaTitle {
+    font-size: 2rem;
+  }
+
+  .ctaDescription {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .curriculumSection,
+  .learningPathSection,
+  .featuresSection,
+  .ctaSection {
+    padding: 3rem 0;
+  }
+
+  .sectionHeader {
+    margin-bottom: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.75rem;
+  }
+
+  .sectionDescription {
+    font-size: 1rem;
+  }
+
+  .curriculumGrid,
+  .learningPathGrid,
+  .featuresGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .ctaTitle {
+    font-size: 1.75rem;
+  }
+
+  .ctaDescription {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroButtons,
+  .ctaButtons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .heroButtons .button,
+  .ctaButtons .button {
+    width: 100%;
+  }
+}

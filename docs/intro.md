@@ -33,4 +33,10 @@ Begin with Chapter 1 to understand why robots require middleware like ROS 2 to c
 
 ## Navigation
 
-Use the sidebar to navigate between chapters, or follow the sequential links at the bottom of each chapter to continue your learning journey.
+Use the sidebar to navigate between chapters, or explore our structured curriculum through the [Learning Modules](./modules/README.md).
+
+The main sections of this educational platform include:
+- [Modules](./modules/README.md) - Start with our structured curriculum
+- [Capstone](./capstone/README.md) - Advanced project integrating all concepts
+- [Hardware](./hardware/README.md) - Physical robot setup and configuration
+- [Chatbot](./chatbot/README.md) - Interactive learning support
